@@ -1,43 +1,15 @@
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-});
-
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    message: 'You loaded this page on ' + new Date()
-  }
-});
-
-var app4 = new Vue({
-  el: '#app-4',
-  data: {
-    todos: [
-      { text: 'Learn JavaScript' },
-      { text: 'Learn Vue' },
-      { text: 'Build something awesome' }
-    ]
-  }
-});
-
-Vue.component('todo-item', {
-  // The todo-item component now accepts a
-  // "prop", which is like a custom attribute.
-  // This prop is called todo.
-  props: ['todo'],
-  template: '<li>{{ todo.text }}</li>'
+Vue.component('category-item', {
+  props: ['category'],
+  template: '<li>{{ category.text }} <ul><li v-for="item in category.itens"> {{ item.name }} </li></ul></li>'
 })
 
 var app7 = new Vue({
-  el: '#app-7',
+  el: '#app',
   data: {
-    groceryList: [
-      { id: 0, text: 'Vegetables' },
-      { id: 1, text: 'Cheese' },
-      { id: 2, text: 'Whatever else humans are supposed to eat' }
+    categories: [
+      { id: 0, text: 'Lanche', itens: [{name: 'Sanduíche de Peito de Peru'}] },
+      { id: 1, text: 'Bebida', itens: [{name: 'Coca-Cola'}, {name: 'Guaraná'}, {name: 'Suco de Laranja'}]},
+      { id: 2, text: 'Outros', itens: [{name: 'Fone de Ouvido'}, {name: 'Cobertor'}] }
     ]
   }
 })
