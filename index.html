@@ -18,6 +18,8 @@
 
         <script src="/lib/dextrap/dextrap.js"></script>
         <script src="/lib/vue.js"></script>
+
+        <link rel="stylesheet" href="/stylesheets/index.css" />
     </head>
 
     <body>
@@ -32,15 +34,17 @@
             </span>
         </nav>
 
-        <div id="app">
-            <ol>
-                <category-item
-                v-for="item in categories"
-                v-bind:category="item"
-                v-bind:key="item.id">
-                </category-item>
-            </ol>
-        </div>
+        <section>
+            <div id="app">
+                <ol class="scannable-list">
+                    <category-item
+                    v-for="item in categories"
+                    v-bind:category="item"
+                    v-bind:key="item.id">
+                    </category-item>
+                </ol>
+            </div>
+        </section>
 
         <script src="/scripts/main.js"></script>
     </body>
