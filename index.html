@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+		<base href="/">
+
+		<title>
+			Food Slide
+		</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Mattheus Jucá">
+		<meta name="description" content="Aplicação Web para simular o controle de pedidos de lanches em uma aeronave comercial.">
+
+        <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/lib/dextrap/dextrap.css" />
+
+        <script src="/lib/dextrap/dextrap.js"></script>
+        <script src="/lib/vue.js"></script>
+    </head>
+
+    <body>
+		<nav class="navbar navbar-primary">
+			<div class="navbar-header">
+                <div class="navbar-brand">
+                    Mattheus Jucá
+                </div>
+            </div>
+            <span>
+                A34
+            </span>
+        </nav>
+
+        <div id="app">
+            {{ message }}
+        </div>
+
+        <div id="app-2">
+            <span v-bind:title="message">
+                Hover your mouse over me for a few seconds to see my dynamically bound title!
+            </span>
+        </div>
+
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app-7">
+            <ol>
+                <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+                </todo-item>
+            </ol>
+        </div>
+
+        <script src="/scripts/main.js"></script>
+    </body>
+</html>
