@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACZ,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,mBAAmB,EAAE,MAAM;EAC3B,eAAe,EAAE,IAAI;EAErB,oBAAK;IACD,OAAO,EAAE,IAAI;IACb,MAAM,EAAE,CAAC;IACT,aAAa,EAAE,iBAAiB;IAEhC,yBAAK;MACD,eAAe,EAAE,IAAI",
+"sources": ["../../../../../../Mattheus%20Juc%C3%A1/Documents/ITA/MOG-64/libera-app/stylesheets/index.scss"],
+"names": [],
+"file": "index.scc"
+}

@@ -1,0 +1,14 @@
+.scannable-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style-type: none; }
+  .scannable-list > li {
+    padding: 16px;
+    margin: 0;
+    border-bottom: 1px solid #808080; }
+    .scannable-list > li > ul {
+      list-style-type: none; }
+
+/*# sourceMappingURL=index.scc.map */
