@@ -42,4 +42,8 @@ nav {
     top: -100%;
     bottom: -100%; }
 
+.check {
+  visibility: hidden;
+  color: green; }
+
 /*# sourceMappingURL=index.css.map */

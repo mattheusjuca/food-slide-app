@@ -17,9 +17,7 @@ Vue.component('category-item', {
           <br />
           {{item.description}}
         </div>
-        <span class="check">
-          Check
-        </span>
+        <i class="check fa fa-check-circle"></i>
       </li>
     </ul>
   </li>`
