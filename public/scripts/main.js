@@ -7,23 +7,25 @@ Vue.component('category-item', {
     </span>
     <ul>
       <li v-for="item in category.itens">
-        <div class="item-simbol">
-          <img :src="item.img"/>
-        </div>
-        <div>
-          <strong>
-            {{ item.name }}
-          </strong>
-          <br />
-          {{item.description}}
-        </div>
-        <i class="check fa fa-check-circle"></i>
+        <span class="item">
+          <div class="item-simbol">
+            <img :src="item.img"/>
+          </div>
+          <div>
+            <strong>
+              {{ item.name }}
+            </strong>
+            <br />
+            {{item.description}}
+          </div>
+          <i class="check fa fa-check-circle"></i>
+        </span>
       </li>
     </ul>
   </li>`
 })
 
-var app7 = new Vue({
+var app = new Vue({
   el: '#app',
   data: {
     categories: [
@@ -31,6 +33,7 @@ var app7 = new Vue({
         text: 'LANCHE', 
         itens: [
           {
+            id: 0,
             name: 'Sanduíche de Peito de Peru',
             description: 'Sanduíche de peito de peru servido com queijo prato no pão com gergelim',
             img: '/images/sanduiche.png'
@@ -41,15 +44,18 @@ var app7 = new Vue({
         text: 'BEBIDA', 
         itens: [
           {
+            id: 0,
             name: 'Coca-Cola', 
             description: 'Latinha de 175mL',
             img: '/images/cocacola.png'
           }, 
           {
+            id: 1,
             name: 'Guaraná',
             img: '/images/guarana.png'
           }, 
           {
+            id: 2,
             name: 'Suco de Laranja', 
             img: '/images/maguary.png'
           }
@@ -59,10 +65,12 @@ var app7 = new Vue({
         text: 'OUTROS', 
         itens: [
           {
+            id: 0,
             name: 'Fone de Ouvido', 
             img: '/images/fone.png'
           }, 
           {
+            id: 1,
             name: 'Cobertor', 
             img: '/images/cobertor.png'
           }
@@ -71,3 +79,11 @@ var app7 = new Vue({
     ]
   }
 })
+
+$(function() {
+  $('.item').click(function(){
+    var $this = $(this);
+    var $check = $this.find(".check");
+    $check.css("visibility", "visible");
+  });
+});
