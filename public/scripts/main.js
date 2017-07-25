@@ -17,6 +17,9 @@ Vue.component('category-item', {
           <br />
           {{item.description}}
         </div>
+        <span class="check">
+          Check
+        </span>
       </li>
     </ul>
   </li>`
