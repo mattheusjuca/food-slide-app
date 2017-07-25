@@ -1,3 +1,6 @@
+nav {
+  padding: 0 2% 0 2%; }
+
 .scannable-list {
   display: block;
   margin: 0;
@@ -5,7 +8,6 @@
   list-style-position: inside;
   list-style-type: none; }
   .scannable-list > li {
-    padding: 16px;
     margin: 0;
     padding: 0;
     border-bottom: 1px solid #808080; }
@@ -16,11 +18,12 @@
         display: flex;
         display: -webkit-flex;
         border-bottom: 1px solid #808080;
-        padding: 5px; }
+        padding: 5px 2% 5px 2%; }
 
 .category-title {
   background-color: #ddd;
-  display: block; }
+  display: block;
+  padding: 5px 2% 5px 2%; }
 
 .item-simbol {
   display: inline-block;

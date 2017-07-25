@@ -1,3 +1,7 @@
+nav {
+    padding: 0 2% 0 2%;
+}
+
 .scannable-list {
     display: block;
     margin: 0;
@@ -6,7 +10,6 @@
     list-style-type: none;
 
     > li {
-        padding: 16px;
         margin: 0;
         padding: 0;
         border-bottom: 1px solid #808080; //This color is DefaultGray from dextrap
@@ -19,7 +22,7 @@
                 display: flex;
                 display: -webkit-flex;
                 border-bottom: 1px solid #808080; //This color is DefaultGray from dextrap
-                padding: 5px; //Clear area small from dextrap
+                padding: 5px 2% 5px 2%; //5px is clear area small from dextrap
             }
         }
     }
@@ -28,6 +31,7 @@
 .category-title {
     background-color: #ddd; //PrimaryGray from dextrap
     display: block;
+    padding: 5px 2% 5px 2%; //5px is clear area small from dextrap
 }
 
 .item-simbol {
