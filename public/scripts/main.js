@@ -37,6 +37,11 @@ var app = new Vue({
             name: 'Sanduíche de Peito de Peru',
             description: 'Sanduíche de peito de peru servido com queijo prato no pão com gergelim',
             img: '/images/sanduiche.png'
+          },
+          {
+            id: 1,
+            name: 'Hamburguer',
+            img: '/images/hamburguer.png'
           }
         ] 
       },
@@ -86,16 +91,32 @@ $(function() {
   $('.item').click(function(){
     var $this = $(this);
     var $check = $this.find(".check");
-    $check.css("visibility", "visible");
-    $("footer").css("display", "flex");
-    $("footer").css("display", "-webkit-flex");
-    selectedItens ++;
-    $('footer').html(selectedItens +
-                      ` itens
-                      <button id="btn-confirm" class="btn btn-success" onclick="sendRequest()">
-                        Confirmar Pedido <i class="fa fa-chevron-right"></i>
-                      </button>`
-                    );
+    if ($this.hasClass("selected")) {
+      $this.removeClass("selected");
+      $check.css("visibility", "hidden");
+      selectedItens --;
+      if (selectedItens === 0) {
+        $("footer").css("display", "none");
+      }
+      $('footer').html(selectedItens +
+                        ` itens
+                        <button id="btn-confirm" class="btn btn-success" onclick="sendRequest()">
+                         Confirmar Pedido <i class="fa fa-chevron-right"></i>
+                        </button>`
+                      );
+    } else {
+      $this.addClass("selected");
+      $check.css("visibility", "visible");
+      $("footer").css("display", "flex");
+      $("footer").css("display", "-webkit-flex");
+      selectedItens ++;
+      $('footer').html(selectedItens +
+                        ` itens
+                        <button id="btn-confirm" class="btn btn-success" onclick="sendRequest()">
+                         Confirmar Pedido <i class="fa fa-chevron-right"></i>
+                        </button>`
+                      );
+    }
   });
 });
 
