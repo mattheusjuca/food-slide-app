@@ -103,7 +103,16 @@ function sendRequest() {
   swal("Pedido Enviado!", "Aguarde na sua poltrona", "success");
 }
 
-function login() {
+var passagers = [
+  {
+    id: 0,
+    name: Mattheus,
+    lastname: Juca,
+    localizador: U78PNM
+  }
+]
+
+function login(localizador, lastname) {
   $("#app").css("display", "initial");
   $("#login").css("display", "none");
 }
@@ -111,4 +120,6 @@ function login() {
 function logout() {
   $("#app").css("display", "none");
   $("#login").css("display", "block");
+  $('#localizador').val('');
+  $('#lastname').val('');
 }

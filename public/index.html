@@ -29,11 +29,11 @@
             <section id="loginWrap">
                 <img src="/images/logo-libera.png"/>
                 <br /><br />
-                <input type="text" placeholder="Localizador"></input>
+                <input type="text" placeholder="Localizador" name="localizador" id="localizador"></input>
                 <br />
-                <input type="text" placeholder="Sobrenome"></input>
+                <input type="text" placeholder="Sobrenome" name="lastname" id="lastname"></input>
                 <br /><br />
-                <button class="btn btn-primary" onclick="login()">Entrar</button>
+                <button class="btn btn-primary" onclick="login(document.getElementById('localizador').value, document.getElementById('lastname').value)">Entrar</button>
             </section>
         </div>
 
