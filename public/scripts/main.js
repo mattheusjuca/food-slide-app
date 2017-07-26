@@ -107,3 +107,8 @@ function login() {
   $("#app").css("display", "initial");
   $("#login").css("display", "none");
 }
+
+function logout() {
+  $("#app").css("display", "none");
+  $("#login").css("display", "block");
+}

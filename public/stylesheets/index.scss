@@ -16,6 +16,7 @@ footer {
 
 nav {
     padding: 0 2% 0 2%;
+    overflow: visible;
 }
 
 .scannable-list {
@@ -94,7 +95,7 @@ nav {
 
 #loginWrap {
     text-align: center;
-    background-color: #0A2A58;; //Dark-blue of dextrap
+    background-color: #0A2A58; //Dark-blue of dextrap
     height:100vh;
     padding-top: 5%;
 
@@ -104,13 +105,47 @@ nav {
     }
 }
 
-input[type=text] {
-    width: 250px;
-    height: 30px;
-    padding: 6px 10px;
+#login {
+    input[type=text] {
+        width: 250px;
+        height: 30px;
+        padding: 6px 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 5px;
+    }
+}
+
+.dropdown {
+    position: relative;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 70px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    font-size: 16px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dropdown-content span {
+    color: black;
+    padding: 11px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    cursor: pointer;
+}
+
+.dropdown-content span:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

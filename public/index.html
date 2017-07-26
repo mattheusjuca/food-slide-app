@@ -28,11 +28,11 @@
         <div id="login">
             <section id="loginWrap">
                 <img src="/images/logo-libera.png"/>
-                <br />
+                <br /><br />
                 <input type="text" placeholder="Localizador"></input>
                 <br />
                 <input type="text" placeholder="Sobrenome"></input>
-                <br />
+                <br /><br />
                 <button class="btn btn-primary" onclick="login()">Entrar</button>
             </section>
         </div>
@@ -41,7 +41,14 @@
 		    <nav class="navbar navbar-primary navbar-sandwich" style="display:inline-block">
 			    <div class="navbar-header">
                     <div class="navbar-brand">
-                        <i class="fa fa-user"></i> Mattheus Jucá <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user"></i> Mattheus Jucá
+                        <i class="dropdown fa fa-caret-down">
+                            <div class="dropdown-content">
+                                <span onclick="logout()">
+                                    <i class="fa fa-times-circle" style="color:red"></i> Sair
+                                </span>
+                            </div>
+                        </i>
                     </div>
                     <span>
                         34A
