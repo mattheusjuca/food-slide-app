@@ -23,7 +23,7 @@ Vue.component('category-item', {
       </li>
     </ul>
   </li>`
-})
+});
 
 var app = new Vue({
   el: '#app',
@@ -80,10 +80,21 @@ var app = new Vue({
   }
 })
 
+var selectedItens = 0;
+
 $(function() {
   $('.item').click(function(){
     var $this = $(this);
     var $check = $this.find(".check");
     $check.css("visibility", "visible");
+    $("footer").css("display", "flex");
+    $("footer").css("display", "-webkit-flex");
+    selectedItens ++;
+    $('footer').html(selectedItens +
+                      ` itens
+                      <button id="btn-confirm" class="btn btn-success">
+                        Confirmar Pedido <i class="fa fa-chevron-right"></i>
+                      </button>`
+                    );
   });
 });

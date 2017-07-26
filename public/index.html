@@ -24,19 +24,19 @@
     </head>
 
     <body>
-		<nav class="navbar navbar-primary navbar-sandwich" style="display:inline-block">
-			<div class="navbar-header">
-                <div class="navbar-brand">
-                    <i class="fa fa-user"></i> Mattheus Jucá
+        <div id="app">
+		    <nav class="navbar navbar-primary navbar-sandwich" style="display:inline-block">
+			    <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <i class="fa fa-user"></i> Mattheus Jucá
+                    </div>
+                    <span>
+                        34A
+                    </span>
                 </div>
-                <span>
-                    34A
-                </span>
-            </div>
-        </nav>
+            </nav>
 
-        <section>
-            <div id="app">
+            <section>
                 <ul class="scannable-list">
                     <category-item
                     v-for="item in categories"
@@ -44,8 +44,10 @@
                     v-bind:key="item.id">
                     </category-item>
                 </ul>
-            </div>
-        </section>
+            </section>
+
+            <footer></footer>
+        </div>
 
         <script src="/scripts/main.js"></script>
     </body>
