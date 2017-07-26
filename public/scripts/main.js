@@ -102,3 +102,8 @@ $(function() {
 function sendRequest() {
   swal("Pedido Enviado!", "Aguarde na sua poltrona", "success");
 }
+
+function login() {
+  $("#app").css("display", "initial");
+  $("#login").css("display", "none");
+}

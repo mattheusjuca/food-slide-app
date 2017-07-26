@@ -87,3 +87,30 @@ nav {
     position: relative;
     float: right;
 }
+
+#app {
+    display: none;
+}
+
+#loginWrap {
+    text-align: center;
+    background-color: #0A2A58;; //Dark-blue of dextrap
+    height:100vh;
+    padding-top: 5%;
+
+    button {
+        display: inline-block;
+        width: 250px;
+    }
+}
+
+input[type=text] {
+    width: 250px;
+    height: 30px;
+    padding: 6px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 5px;
+}
