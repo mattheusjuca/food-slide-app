@@ -92,9 +92,13 @@ $(function() {
     selectedItens ++;
     $('footer').html(selectedItens +
                       ` itens
-                      <button id="btn-confirm" class="btn btn-success">
+                      <button id="btn-confirm" class="btn btn-success" onclick="sendRequest()">
                         Confirmar Pedido <i class="fa fa-chevron-right"></i>
                       </button>`
                     );
   });
 });
+
+function sendRequest() {
+  swal("Pedido Enviado!", "Aguarde na sua poltrona", "success");
+}
