@@ -143,4 +143,5 @@ function logout() {
   $("#login").css("display", "block");
   $('#localizador').val('');
   $('#lastname').val('');
+  $('.item').removeClass("selected");
 }
